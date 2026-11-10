@@ -1,0 +1,462 @@
+
+/* =================================
+   GLOBAL STYLES
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background-color: #FFF9F3;
+    color: #55443F;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.8;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #754C42;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =================================
+   NAVIGATION
+================================= */
+
+header {
+    background-color: #FFF9F3;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(80, 50, 40, 0.06);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #754C42;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    color: #806B62;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #C17C70;
+}
+
+
+/* =================================
+   HERO SECTION
+================================= */
+
+.hero {
+    min-height: 540px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 80px 25px;
+
+    background:
+        linear-gradient(
+            rgba(70, 43, 35, 0.42),
+            rgba(70, 43, 35, 0.42)
+        ),
+        url("images/hero-dessert.jpg");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 4rem;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #FFF9F3;
+}
+
+.eyebrow {
+    display: block;
+    color: #C17C70;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.hero .eyebrow {
+    color: #F4D8C8;
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+.button {
+    display: inline-block;
+    background-color: #C17C70;
+    color: white;
+
+    padding: 12px 30px;
+    border-radius: 30px;
+
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #9F6258;
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   GENERAL SECTIONS
+================================= */
+
+.section-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 30px;
+}
+
+.section-container > h2,
+.section-container > p {
+    text-align: center;
+}
+
+.introduction {
+    max-width: 850px;
+    text-align: center;
+}
+
+.introduction p {
+    font-size: 1.05rem;
+    color: #806B62;
+}
+
+.section-description {
+    color: #806B62;
+    margin-bottom: 40px;
+}
+
+
+/* =================================
+   FAVORITE FLAVORS
+================================= */
+
+.favorites {
+    text-align: center;
+}
+
+.dessert-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.dessert-card {
+    background-color: white;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(80, 50, 40, 0.07);
+
+    text-align: left;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.dessert-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(80, 50, 40, 0.12);
+}
+
+.dessert-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-label {
+    color: #C17C70;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.dessert-card h3 {
+    font-size: 1.8rem;
+    margin: 8px 0 12px;
+}
+
+.dessert-card p {
+    color: #806B62;
+    font-size: 0.95rem;
+}
+
+
+/* =================================
+   SWEET MEMORIES
+================================= */
+
+.memories {
+    background-color: #F4E7DD;
+}
+
+.memory-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.memory-content img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(80, 50, 40, 0.1);
+}
+
+.memory-text h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.memory-text p {
+    color: #806B62;
+}
+
+
+/* =================================
+   DESSERT DISCOVERY
+================================= */
+
+.discovery {
+    text-align: center;
+}
+
+.discovery p {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    color: #806B62;
+}
+
+blockquote {
+    max-width: 700px;
+    margin: 40px auto 0;
+    padding: 25px;
+
+    background-color: #F2DFCA;
+    border-left: 5px solid #C17C70;
+    border-radius: 8px;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #754C42;
+}
+
+
+/* =================================
+   DESSERT HISTORY
+================================= */
+
+.history {
+    background-color: #F4E7DD;
+    text-align: center;
+}
+
+.history p {
+    max-width: 750px;
+    margin: 0 auto 18px;
+    color: #806B62;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    background-color: #754C42;
+    color: #FFF9F3;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer h3 {
+    color: #F4DFD3;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #E8D4C9;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 0.8rem;
+    opacity: 0.75;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .memory-content {
+        gap: 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        gap: 10px 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .section-container {
+        padding: 65px 20px;
+    }
+
+    .dessert-container {
+        grid-template-columns: 1fr;
+    }
+
+    .dessert-card img {
+        height: 230px;
+    }
+
+    .memory-content {
+        grid-template-columns: 1fr;
+    }
+
+    .memory-content img {
+        height: 280px;
+    }
+
+    .memory-text h3 {
+        font-size: 1.7rem;
+    }
+
+    blockquote {
+        font-size: 1.2rem;
+    }
+}
